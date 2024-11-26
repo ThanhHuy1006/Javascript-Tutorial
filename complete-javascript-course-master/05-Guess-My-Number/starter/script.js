@@ -32,6 +32,7 @@
 // }
 let initScore=20;
 let secretNumber=Math.trunc(Math.random()*20)+1;
+let highScore=0;
 // Math.random()*20 ngẫu nhiên từ - tới 20;
 // trunc - lấy phần nguyên ví dụ: 19.999 thì lấy 19;
 
@@ -57,6 +58,12 @@ document.querySelector('.check').addEventListener('click',function(){
     document.querySelector('.number').style.width="50rem";
     document.querySelector('.number').textContent=secretNumber;
     initScore++;
+    if(initScore>highScore){
+      highScore=initScore; 
+      document.querySelector('.highscore').textContent=highScore;
+    }
+   
+    
   }
   //too high
   else if(guess>secretNumber){
@@ -98,6 +105,8 @@ document.querySelector('.again').addEventListener('click',function(){
 
 
 });
+////implement HighScore
+
 
 
 
