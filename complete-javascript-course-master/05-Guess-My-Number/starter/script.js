@@ -106,6 +106,29 @@ document.querySelector('.again').addEventListener('click',function(){
 
 });
 ////implement HighScore
+///BONUS:Implement ESC key
+// document.addEventListener('keydown',function(){
+//   alert("nghi game")
+
+// })
+document.addEventListener('keydown',function(e){
+  console.log(e);
+  //log ra key da an
+  if(e.key=='Escape'){
+    
+    initScore=20;
+    // highScore=0;
+    secretNumber=Math.trunc(Math.random()*20)+1;  
+    document.querySelector('body').style.backgroundColor="#222";
+    document.querySelector('.message').textContent='Start guessing...';
+    document.querySelector('.score').textContent=initScore;
+    document.querySelector('.guess').value='';
+    document.querySelector('.number').textContent="?";
+    document.querySelector('.number').style.width="15rem";
+
+  }
+
+})
 
 
 
