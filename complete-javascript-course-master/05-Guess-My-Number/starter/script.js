@@ -31,12 +31,12 @@
 //   return Math.floor(Math.random() * (max - min) + min);
 // }
 let initScore=20;
-const secretNumber=Math.trunc(Math.random()*20)+1;
+let secretNumber=Math.trunc(Math.random()*20)+1;
 // Math.random()*20 ngẫu nhiên từ - tới 20;
 // trunc - lấy phần nguyên ví dụ: 19.999 thì lấy 19;
 
-// console.log(number)
-document.querySelector('.number').textContent=secretNumber;
+console.log(secretNumber)
+document.querySelector('.number').textContent="?";
 
 document.querySelector('.check').addEventListener('click',function(){
   // console.log(document.querySelector('.guess').value);
@@ -55,6 +55,7 @@ document.querySelector('.check').addEventListener('click',function(){
     ///select element body khong can cham
     document.querySelector('body').style.backgroundColor="#60b347";
     document.querySelector('.number').style.width="50rem";
+    document.querySelector('.number').textContent=secretNumber;
     initScore++;
   }
   //too high
@@ -82,6 +83,21 @@ document.querySelector('.check').addEventListener('click',function(){
 
 });
 ////////////////////Manipulating CSS styles
+///implement button "again"
+document.querySelector('.again').addEventListener('click',function(){
+
+
+    initScore=20;
+    secretNumber=Math.trunc(Math.random()*20)+1;  
+    document.querySelector('body').style.backgroundColor="#222";
+    document.querySelector('.message').textContent='Start guessing...';
+    document.querySelector('.score').textContent=initScore;
+    document.querySelector('.guess').value='';
+    document.querySelector('.number').textContent="?";
+    document.querySelector('.number').style.width="15rem";
+
+
+});
 
 
 
