@@ -43,20 +43,27 @@ document.querySelector('.check').addEventListener('click',function(){
   // document.querySelector('.message').textContent="🤗 Correct Number";
   const guess=Number(document.querySelector('.guess').value);
   console.log(typeof(guess))
+  //no type
   if(!guess){
     // console.log("No Number ")
     console.log(document.querySelector('.message').textContent="😒 No Number !");
   }
+  //win
   else if(guess===secretNumber){
     console.log(document.querySelector('.message').textContent="🎉Correct Number!");
     // document.querySelector('.score').textContent++;
+    ///select element body khong can cham
+    document.querySelector('body').style.backgroundColor="#60b347";
+    document.querySelector('.number').style.width="50rem";
     initScore++;
   }
+  //too high
   else if(guess>secretNumber){
     console.log(document.querySelector('.message').textContent="Too High!")
     // document.querySelector('.score').textContent--;
     initScore--;
   }
+  // too low
   else if(guess<secretNumber){
     console.log(document.querySelector('.message').textContent="Too Low!")
     // document.querySelector('.score').textContent--;
@@ -75,5 +82,7 @@ document.querySelector('.check').addEventListener('click',function(){
 
 });
 ////////////////////Manipulating CSS styles
+
+
 
 
