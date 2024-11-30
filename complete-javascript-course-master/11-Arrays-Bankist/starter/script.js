@@ -74,3 +74,37 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// sliceMethod
+// systax:
+// array.slice(start, end)
+
+// Parameters
+// start :
+// Tùy chọn.
+// Vị trí bắt đầu. Mặc định là 0.
+// Số âm chọn từ cuối mảng.
+// end :
+// Tùy chọn.
+// Vị trí kết thúc. Mặc định là phần tử cuối cùng.
+// Số âm chọn từ cuối mảng.
+// Return Value:
+// A new array containing the selected elements.
+  
+
+
+let arr=['a','b','c','d','e'];
+console.log(arr.slice());
+// 'a','b','c','d','e'
+console.log(arr.slice(3));
+//mảng bắt đầu từ vị trí số 3
+//'d','e'
+
+
+console.log(arr.slice(1,3))
+
+
+// console.log(arr.slice(2));
+// // 'c','d'
+// console.log(arr.slice(1))
+// // 'b','c','d'
+// console.log(arr.slice(2,4));
