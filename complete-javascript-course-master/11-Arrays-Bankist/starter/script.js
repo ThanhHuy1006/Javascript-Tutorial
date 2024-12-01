@@ -101,10 +101,40 @@ console.log(arr.slice(3));
 
 
 console.log(arr.slice(1,3))
+// (2) ['b', 'c']
+console.log(arr.slice(2,3))
 
+console.log(arr.slice(2,4))
+//['c','d']
+// khong xuat phan tu cuoi cung 
 
-// console.log(arr.slice(2));
-// // 'c','d'
-// console.log(arr.slice(1))
-// // 'b','c','d'
-// console.log(arr.slice(2,4));
+console.log(arr.slice(-1))
+// ['e']
+console.log(arr.slice(1,-2))
+//['b','c']
+
+//SPLICE
+// giong nhu slice nhung thao tao truc tiep tren mang
+// console.log(arr.splice(3))
+
+// console.log(arr)
+arr.splice(-1)
+console.log(arr)
+// ['a','b','c','d']
+arr.splice(1,2)
+console.log(arr)
+// ['a','d']
+//REVERSE
+///lam thay doi mang ban dau
+arr=['a','b','c','d','e']
+const arr2=['t','h','a','n','h','h','u','y']
+arr2.reverse()
+console.log(arr2)
+
+// CONCAT
+let concat1=['h','e','l','l','o'];
+let concat2=['w','o','r','l','d'];
+let concatal=concat1.concat(concat2);
+console.log(concatal)
+///JOIN
+console.log(concatal.join('-'))
