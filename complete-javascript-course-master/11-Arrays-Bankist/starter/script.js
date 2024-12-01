@@ -63,7 +63,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// LECTURES
+// // LECTURES
 
 // const currencies = new Map([
 //   ['USD', 'United States dollar'],
@@ -140,14 +140,92 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // console.log(concatal.join('-'))
 
 
-///the new AT method
-const arr=[23,11,64]
-console.log(arr[0]);
-console.log(arr.at(0))
-//get the last element
-console.log(arr[arr.length-1])
-console.log(arr.slice(-1)[0])
-console.log(arr.at(-1))
-///work with string
-console.log('thanhhuy'.at(0))
-console.log('thanhhuy'.at(-1))
+// ///the new AT method
+// const arr=[23,11,64]
+// console.log(arr[0]);
+// console.log(arr.at(0))
+// //get the last element
+// console.log(arr[arr.length-1])
+// console.log(arr.slice(-1)[0])
+// console.log(arr.at(-1))
+// ///work with string
+// console.log('thanhhuy'.at(0))
+// console.log('thanhhuy'.at(-1))
+
+
+// 145. Looping Arrays: forEach
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// for (const movement of movements){
+//   if(movement>0){
+//     console.log(`You deposited ${movement}`)
+//   }
+//   else {
+//     console.log(`You withdrew ${Math.abs(movement)}`)
+//   }
+// }
+
+// for(const [i,movement]of movements.entries()){
+//     if(movement>0){
+//     console.log(`Movement ${i+1} You deposited ${movement}`)
+//   }
+//   else {
+//     console.log(`Movement ${i+1 } You withdrew ${Math.abs(movement)}`)
+//   }
+// }
+
+// movements.forEach(function(movement){
+//   if(movement>0){
+//     console.log(`You deposited ${movement}`)
+//   }
+//   else {
+//     console.log(`You withdrew ${Math.abs(movement)}`)
+//   }
+// })
+// movements.forEach(function(movement,index){
+//   if(movement>0){
+//     console.log(`Movement ${index+1} You deposited ${movement}`)
+//   }
+//   else {
+//     console.log(`Movement ${index+1 } You withdrew ${Math.abs(movement)}`)
+//   }
+
+// })
+// movements.forEach((movement,index)=>{
+//   if(movement>0){
+//         console.log(`Movement ${index+1} You deposited ${movement}`)
+//       }
+//       else {
+//         console.log(`Movement ${index+1 } You withdrew ${Math.abs(movement)}`)
+//       }
+// })
+// const arr = [23, 34, 77, 99, 324];
+// let sum = 0;
+// for (const el of arr) {
+//   sum += el;
+// }
+// console.log(sum);
+
+// const arr=[1,2,4,3,5,6];
+// let sum=0;
+// arr.forEach(function())
+
+
+// let sum=0;
+// arr.forEach(function(a){
+//   sum=sum+a;
+// })
+// console.log(sum)
+// arr.forEach(a=>{sum=sum+a});
+// console.log(sum)
+// const items = ["item1", "item2", "item3"];
+// const copyItems = [];
+
+// // before
+// for (let i = 0; i < items.length; i++) {
+//   copyItems.push(items[i]);
+// }
+
+// // after
+// items.forEach((item) => {
+//   copyItems.push(item);
+// });
