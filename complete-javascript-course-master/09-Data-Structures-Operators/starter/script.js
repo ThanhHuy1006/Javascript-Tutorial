@@ -78,29 +78,33 @@ const restaurant = {
 ////105. Destructuring Objects
 //ten bien===ten thuoc tinh cua object
 
-const { name,openingHours,categories}=restaurant;
-console.log(name,openingHours,categories)
-const{
-  name:restaurantName,
-  openingHours:hours,
-  categories:tags
-}=restaurant;
-console.log(restaurantName,hours,tags);
+// const { name,openingHours,categories}=restaurant;
+// console.log(name,openingHours,categories)
+// const{
+//   name:restaurantName,
+//   openingHours:hours,
+//   categories:tags
+// }=restaurant;
+// console.log(restaurantName,hours,tags);
 
 
-///default values
-const {menu=[],starterMenu:starter=[]}=restaurant;
-console.log(menu,starter)
-//mutating variables
-let a=111;
-let b=999;
-const obj={a:23,b:7,c:14};
-({a,b}=obj);
-console.log(a,b);
-//nested object
+// ///default values
+// const {menu=[],starterMenu:starter=[]}=restaurant;
+// console.log(menu,starter)
+// //mutating variables
+// let a=111;
+// let b=999;
+// const obj={a:23,b:7,c:14};
+// ({a,b}=obj);
+// console.log(a,b);
+// //nested object
 
-const {fri:{open:o,close:c}}=openingHours;
-console.log(o,c);
+// const {fri:{open:o,close:c}}=openingHours;
+// console.log(o,c);
 
+
+
+////106. The Spread Operator (...)
+///107.
 
 
