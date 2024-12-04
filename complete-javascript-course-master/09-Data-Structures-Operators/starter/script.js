@@ -27,7 +27,11 @@ const restaurant = {
   },
   order:function(starterIndex,mainIndex){
     return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]];
+  },
+  orderPasta: function(ing1,ing2,ing3){
+    console.log(`Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`);
   }
+
 };
 
 
@@ -97,7 +101,7 @@ const restaurant = {
 // const obj={a:23,b:7,c:14};
 // ({a,b}=obj);
 // console.log(a,b);
-// //nested object
+//nested object
 
 // const {fri:{open:o,close:c}}=openingHours;
 // console.log(o,c);
@@ -105,6 +109,60 @@ const restaurant = {
 
 
 ////106. The Spread Operator (...)
-///107.
+const arr=[7,8,9];
+const badNewArr=[1,2,arr[0],arr[1],arr[2]];
+console.log(badNewArr)
+
+
+const newArr=[1,2,...arr];
+// const newArr=[1,2,arr];
+console.log(newArr)
+
+
+console.log(...newArr);
+
+const newMenu=[...restaurant.mainMenu,'Gnocci'];
+console.log(newMenu);
+// //copy array
+const mainMenuCopy=[...restaurant.mainMenu];
+// //JOIN 2 arrays
+const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
+console.log(menu);
+// // Iterables: arrays,strings,maps,sets.NOT object
+
+
+const str='GOAT';
+const letters=[...str,'','HUY'];
+console.log(letters);
+console.log('h','u')
+
+
+////  
+// const ingredients=[prompt('Let\'s make pasta ! Ingredient 1?'),prompt('Let\'s make pasta ! Ingredient 2?'),prompt('Let\'s make pasta ! Ingredient 3?')];
+// console.log(ingredients);
+
+// // restaurant.orderPasta(ingredients[0],ingredients[1],ingredients[2]);
+// restaurant.orderPasta(...ingredients);
+
+
+// // Objects
+
+const newRestaurant={founderIn:1998,...restaurant,fouderName:'Guiseppe'};
+console.log(newRestaurant)
+
+
+const restaurantCopy={...restaurant};
+restaurantCopy.name='Roma';
+console.log(restaurantCopy.name,restaurant.name)
+///107. Rest Pattern and Parameters
+// 112. Looping Arrays: The for-of Loop
+
+// 113. Enhanced Object Literals
+// 122. Working With Strings - Part 1
+// 123. Working With Strings - Part 2
+// 124. Working With Strings - Part 3
+
+
+
 
 
