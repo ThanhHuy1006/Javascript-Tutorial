@@ -156,12 +156,20 @@ const restaurant = {
 // console.log(restaurantCopy.name,restaurant.name)
 // ///107. Rest Pattern and Parameters
 ///SPREAD ,because on RIGHT side of "="
-const arr=[1,2,...[3,4]]
-console.log(arr);
-/// REST,because on LEFT side of "="
-const [a,b ,...others]=[1,2,3,4];
-console.log(a,b,others);
+// const arr=[1,2,...[3,4]]
+// console.log(arr);
+// /// REST,because on LEFT side of "="
+// const [a,b ,...others]=[1,2,3,4];
+// console.log(a,b,others);
 // 112. Looping Arrays: The for-of Loop
+const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
+for(const item of menu) console.log(item);
+
+
+for(const item of menu.entries()){
+  console.log(item)
+}
+console.log(menu.entries())
 
 
 // 113. Enhanced Object Literals
