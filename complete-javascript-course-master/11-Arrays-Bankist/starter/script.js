@@ -229,3 +229,10 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // items.forEach((item) => {
 //   copyItems.push(item);
 // });
+
+// 150. Data Transformations: map, filter, reduce
+// 151. The map Method
+
+// 153. The filter Method
+
+// 156. The Magic of Chaining Methods
