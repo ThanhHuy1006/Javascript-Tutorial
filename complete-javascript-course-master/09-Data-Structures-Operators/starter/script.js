@@ -25,15 +25,15 @@ const restaurant = {
       close: 24,
     },
   },
-  order:function(starterIndex,mainIndex){
-    return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]];
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderPasta: function(ing1,ing2,ing3){
-    console.log(`Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`);
-  }
-
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`
+    );
+  },
 };
-
 
 // // 103. Destructuring Arrays
 // const arr=[2,3,4]
@@ -51,8 +51,6 @@ const restaurant = {
 // // console.log(first,second)
 // // const [first,,second]=restaurant.categories;tao dau phay de step qua phan tu tiep theo
 
-
-
 // // let [main,,secondary]=restaurant.categories;
 // // console.log(main,secondary);
 // // //hoan doi main va secondary
@@ -60,7 +58,7 @@ const restaurant = {
 // // // main=secondary;
 // // // secondary=temp;
 // // // console.log(main,secondary);
-// // /// hoan doi bang destructuring 
+// // /// hoan doi bang destructuring
 // // [main,secondary]=[secondary,main];
 // // console.log(main,secondary);
 // //vergan,italian
@@ -73,11 +71,9 @@ const restaurant = {
 // const [i, ,[j,k]]=nested;
 // console.log(i,j,k);
 
-
 // //default values
 // const [p=1,q=1,r=1]=[8,9];
 // console.log(p,q,r)
-
 
 ////105. Destructuring Objects
 //ten bien===ten thuoc tinh cua object
@@ -90,7 +86,6 @@ const restaurant = {
 //   categories:tags
 // }=restaurant;
 // console.log(restaurantName,hours,tags);
-
 
 // ///default values
 // const {menu=[],starterMenu:starter=[]}=restaurant;
@@ -106,18 +101,14 @@ const restaurant = {
 // const {fri:{open:o,close:c}}=openingHours;
 // console.log(o,c);
 
-
-
 ////106. The Spread Operator (...)
 // const arr=[7,8,9];
 // const badNewArr=[1,2,arr[0],arr[1],arr[2]];
 // console.log(badNewArr)
 
-
 // const newArr=[1,2,...arr];
 // // const newArr=[1,2,arr];
 // console.log(newArr)
-
 
 // console.log(...newArr);
 
@@ -130,26 +121,22 @@ const restaurant = {
 // console.log(menu);
 // // // Iterables: arrays,strings,maps,sets.NOT object
 
-
 // const str='GOAT';
 // const letters=[...str,'','HUY'];
 // console.log(letters);
 // console.log('h','u')
 
-
-// ////  
+// ////
 // // const ingredients=[prompt('Let\'s make pasta ! Ingredient 1?'),prompt('Let\'s make pasta ! Ingredient 2?'),prompt('Let\'s make pasta ! Ingredient 3?')];
 // // console.log(ingredients);
 
 // // // restaurant.orderPasta(ingredients[0],ingredients[1],ingredients[2]);
 // // restaurant.orderPasta(...ingredients);
 
-
 // // // Objects
 
 // const newRestaurant={founderIn:1998,...restaurant,fouderName:'Guiseppe'};
 // console.log(newRestaurant)
-
 
 // const restaurantCopy={...restaurant};
 // restaurantCopy.name='Roma';
@@ -162,22 +149,104 @@ const restaurant = {
 // const [a,b ,...others]=[1,2,3,4];
 // console.log(a,b,others);
 // 112. Looping Arrays: The for-of Loop
-const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
-for(const item of menu) console.log(item);
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// for (const item of menu) console.log(item);
 
+// for (const item of menu.entries()) {
+//   console.log(item);
+// }
+// console.log(menu.entries());
+// const displayProduct = products => {
+//   console.log('danh sach san pham ');
+//   for (let i = 0; i < products.length; i++) {
+//     console.log(`stt : ${i} ${products[i].name} ${products[i].price}`);
+//   }
+// };
+// displayProduct(listProduct);
+// const sumPrice = products => {
+//   let sum = 0;
+//   for (let i = 0; i < products.length; i++) {
+//     sum += products[i].price;
+//   }
+//   return sum;
+// };
+// console.log(sumPrice(listProduct));
+// const quickSort = arr => {
+//   if (arr.length <= 1) {
+//     return arr;
+//   }
 
-for(const item of menu.entries()){
-  console.log(item)
-}
-console.log(menu.entries())
+//   let pivot = arr[0];
+//   let leftArr = [];
+//   let rightArr = [];
 
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < pivot) {
+//       leftArr.push(arr[i]);
+//     } else {
+//       rightArr.push(arr[i]);
+//     }
+//   }
+
+//   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+// };
+const listProduct = [
+  { name: 'Laptop', price: 1500 },
+  { name: 'Phone', price: 800 },
+  { name: 'Headphones', price: 200 },
+  { name: 'Tablet', price: 1200 },
+];
+const filterPrice = products => {
+  if (products.length <= 1) {
+    return products;
+  }
+  let pivot = products[products.length - 1];
+  let left = [];
+  let right = [];
+  for (let i = 0; i < products.length - 1; i++) {
+    if (products[i].price > pivot.price) {
+      left.push(products[i]);
+    } else {
+      right.push(products[i]);
+    }
+  }
+  return [...filterPrice(left), pivot, ...filterPrice(right)];
+};
+
+// const quickSort = products => {
+//   // Nếu mảng rỗng hoặc chỉ có 1 phần tử, trả về mảng đó
+//   if (products.length <= 1) {
+//     return products;
+//   }
+
+//   // Chọn phần tử pivot
+//   const pivot = products[products.length - 1];
+//   const left = []; // Sản phẩm có giá nhỏ hơn pivot
+//   const right = []; // Sản phẩm có giá lớn hơn hoặc bằng pivot
+
+//   // Phân tách các phần tử
+//   for (let i = 0; i < products.length - 1; i++) {
+//     if (products[i].price < pivot.price) {
+//       left.push(products[i]);
+//     } else {
+//       right.push(products[i]);
+//     }
+//   }
+
+//   // Đệ quy sắp xếp mảng bên trái và bên phải, rồi kết hợp lại
+//   return [...quickSort(left), pivot, ...quickSort(right)];
+// };
+
+// const test1 = quickSort(listProduct);
+const test2 = filterPrice(listProduct);
+console.log(test2);
+
+// const filterPrice = products => {
+//   quickSort(products);
+// };
 
 // 113. Enhanced Object Literals
+
 // 122. Working With Strings - Part 1
 // 123. Working With Strings - Part 2
 // 124. Working With Strings - Part 3
-
-
-
-
-
