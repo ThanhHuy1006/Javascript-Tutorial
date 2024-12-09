@@ -33,6 +33,10 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`
     );
   },
+  orderPizza: function (mainIngredient, ...ortherIngredients) {
+    console.log(mainIngredient);
+    console.log(ortherIngredients);
+  },
 };
 
 // // 103. Destructuring Arrays
@@ -145,9 +149,53 @@ const restaurant = {
 ///SPREAD ,because on RIGHT side of "="
 // const arr=[1,2,...[3,4]]
 // console.log(arr);
-// /// REST,because on LEFT side of "="
-// const [a,b ,...others]=[1,2,3,4];
-// console.log(a,b,others);
+/// REST,because on LEFT side of "="
+// starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+// mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+// const [a, b, ...others] = [1, 2, 3, 4];
+// console.log(a, b, others);
+
+// const [pizza, , Risotto, ...ortherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+
+//Objects
+// openingHours: {
+//   thu: {
+//     open: 12,
+//     close: 22,
+//   },
+//   fri: {
+//     open: 11,
+//     close: 23,
+//   },
+//   sat: {
+//     open: 0, // Open 24 hours
+//     close: 24,
+//   },
+// },
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat, weekdays);
+// // 2)Functions
+// const add = function (...numbers) {
+//   // console.log(numbers);
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum = sum + numbers[i];
+//   }
+//   return sum;
+// };
+// console.log(add(2, 3));
+// add(5, 3, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// const x=[23,5,7]
+// add(...x);
+// console.log(pizza, Risotto, ortherFood);
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('mushroom');
+
 // 112. Looping Arrays: The for-of Loop
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const item of menu) console.log(item);
@@ -190,28 +238,28 @@ const restaurant = {
 
 //   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
 // };
-const listProduct = [
-  { name: 'Laptop', price: 1500 },
-  { name: 'Phone', price: 800 },
-  { name: 'Headphones', price: 200 },
-  { name: 'Tablet', price: 1200 },
-];
-const filterPrice = products => {
-  if (products.length <= 1) {
-    return products;
-  }
-  let pivot = products[products.length - 1];
-  let left = [];
-  let right = [];
-  for (let i = 0; i < products.length - 1; i++) {
-    if (products[i].price > pivot.price) {
-      left.push(products[i]);
-    } else {
-      right.push(products[i]);
-    }
-  }
-  return [...filterPrice(left), pivot, ...filterPrice(right)];
-};
+// const listProduct = [
+//   { name: 'Laptop', price: 1500 },
+//   { name: 'Phone', price: 800 },
+//   { name: 'Headphones', price: 200 },
+//   // { name: 'Tablet', price: 1200 },
+// ];
+// const filterPrice = products => {
+//   if (products.length <= 1) {
+//     return products;
+//   }
+//   let pivot = products[products.length - 1];
+//   let left = [];
+//   let right = [];
+//   for (let i = 0; i < products.length - 1; i++) {
+//     if (products[i].price > pivot.price) {
+//       left.push(products[i]);
+//     } else {
+//       right.push(products[i]);
+//     }
+//   }
+//   return [...filterPrice(left), pivot, ...filterPrice(right)];
+// };
 
 // const quickSort = products => {
 //   // Nếu mảng rỗng hoặc chỉ có 1 phần tử, trả về mảng đó
@@ -238,8 +286,8 @@ const filterPrice = products => {
 // };
 
 // const test1 = quickSort(listProduct);
-const test2 = filterPrice(listProduct);
-console.log(test2);
+// const test2 = filterPrice(listProduct);
+// console.log(test2);
 
 // const filterPrice = products => {
 //   quickSort(products);
