@@ -89,8 +89,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // // Số âm chọn từ cuối mảng.
 // // Return Value:
 // // A new array containing the selected elements.
-  
-
 
 // let arr=['a','b','c','d','e'];
 // console.log(arr.slice());
@@ -99,14 +97,13 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // //mảng bắt đầu từ vị trí số 3
 // //'d','e'
 
-
 // console.log(arr.slice(1,3))
 // // (2) ['b', 'c']
 // console.log(arr.slice(2,3))
 
 // console.log(arr.slice(2,4))
 // //['c','d']
-// // khong xuat phan tu cuoi cung 
+// // khong xuat phan tu cuoi cung
 
 // console.log(arr.slice(-1))
 // // ['e']
@@ -139,7 +136,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // ///JOIN
 // console.log(concatal.join('-'))
 
-
 // ///the new AT method
 // const arr=[23,11,64]
 // console.log(arr[0]);
@@ -151,7 +147,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // ///work with string
 // console.log('thanhhuy'.at(0))
 // console.log('thanhhuy'.at(-1))
-
 
 // 145. Looping Arrays: forEach
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -209,7 +204,6 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // let sum=0;
 // arr.forEach(function())
 
-
 // let sum=0;
 // arr.forEach(function(a){
 //   sum=sum+a;
@@ -231,6 +225,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // });
 
 // 150. Data Transformations: map, filter, reduce
+
 // 151. The map Method
 
 // 153. The filter Method
